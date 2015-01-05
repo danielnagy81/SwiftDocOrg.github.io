@@ -1349,6 +1349,9 @@ h2 {
 .p-news h2 {
   font-weight: 600;
 }
+a {
+  color: #ee543d;
+}
 .content {
   margin: 0 0 50px;
 }
@@ -1356,9 +1359,6 @@ h2 {
   font-size: 22px;
   font-weight: 600;
   margin: 25px 0 5px;
-}
-.content a {
-  color: #ee543d;
 }
 .content .main-list {
   list-style: none;
@@ -1547,6 +1547,20 @@ h2 {
 .postlist .date {
   color: #999999;
   white-space: nowrap;
+}
+/* hierarchy SVG embed pages */
+.p-hierarchy .container {
+  width: auto;
+  padding-top: 10px;
+}
+.p-hierarchy #footer {
+  background: none;
+  text-align: left;
+  padding-left: 15px;
+  color: #999999;
+}
+.p-hierarchy #footer a {
+  color: #999999;
 }
 .push {
   height: 60px;
