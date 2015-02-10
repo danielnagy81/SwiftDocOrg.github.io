@@ -32,8 +32,8 @@
     <meta name="twitter:description" content="Swift documentation for 'Slice': The Array-like type that represents a sub-sequence of any Array, ContiguousArray, or other Slice."/>
     <meta name="twitter:url" content="http://swiftdoc.org/type/Slice/index.html"/>
 
-    <link href="/assets/swift-12ce328466322affeebe020c90668263.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-bccd34e2efeea71f703a400509773f6b.js" type="text/javascript"></script>
+    <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/swift-8e164fcbf5eeb7b2ee9091204467e03e.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -183,7 +183,7 @@ Objective-C.</p>
 </div>
 
 <h3>Inheritance</h3>
-<code class="inherits">MutableCollectionType, Sliceable, ArrayLiteralConvertible, Reflectable, Printable, DebugPrintable, ArrayType</code>
+<code class="inherits">MutableCollectionType, Sliceable, _DestructorSafeContainer, __ArrayType, ArrayLiteralConvertible, _ArrayType, Reflectable, Printable, DebugPrintable</code>
 <span class="viz"><a href="hierarchy/">Protocol hierarchy</a></span>
 
 <h3>Associated types</h3>
@@ -365,7 +365,7 @@ Requires: count &gt; 0</p>
 
 <p>Postcondition: <code>capacity == 0</code> iff <code>keepCapacity</code> is <code>false</code>.</p>
 
-<p>Complexity: O(<code>countElements(self)</code>).</p>
+<p>Complexity: O(<code>count(self)</code>).</p>
 </div>
 </div>
 <div class="declaration">
@@ -459,7 +459,7 @@ speed.</p>
 <div class="comment">
     <p>Replace the given <code>subRange</code> of elements with <code>newElements</code>.</p>
 
-<p>Complexity: O(<code>countElements(subRange)</code>) if <code>subRange.endIndex
+<p>Complexity: O(<code>count(subRange)</code>) if <code>subRange.endIndex
 == self.endIndex</code> and <code>isEmpty(newElements)</code>, O(N) otherwise.</p>
 </div>
 </div>
@@ -470,7 +470,7 @@ speed.</p>
 
 <p>Invalidates all indices with respect to <code>self</code>.</p>
 
-<p>Complexity: O(<code>count + countElements(newElements)</code>).</p>
+<p>Complexity: O(<code>count + count(newElements)</code>).</p>
 </div>
 </div>
 <div class="declaration">
@@ -503,7 +503,7 @@ speed.</p>
 
             <div id="footer">
             <span class="line">
-                <span class="version">Swift version 1.1 (swift-600.0.57.3)</span> &nbsp;&sdot;&nbsp;
+                <span class="version">Swift version 1.2 (swift-602.0.37.3)</span> &nbsp;&sdot;&nbsp;
                 <a href="/news/">News</a>
             </span> <span class="sep">&nbsp;&sdot;&nbsp;</span>
             <span class="line">
