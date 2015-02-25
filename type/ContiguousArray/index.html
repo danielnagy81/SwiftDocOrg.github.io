@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/ContiguousArray/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -372,7 +372,7 @@ yields <code>[1, 2, 3, -1, -2, 4, 5, 6, -1, -2, 7, 8, 9]</code></p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">func reduce&lt;U&gt;(initial: U, combine: (U, T) -&gt; U) -> U</code>
+<code class="language-swift">func reduce&lt;U&gt;(initial: U, combine: @noescape (U, T) -&gt; U) -> U</code>
 <div class="comment">
     <p>Return the result of repeatedly calling <code>combine</code> with an
 accumulated value initialized to <code>initial</code> and each element of
@@ -425,7 +425,7 @@ over the elements.</p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">func withUnsafeBufferPointer&lt;R&gt;(body: (UnsafeBufferPointer&lt;T&gt;) -&gt; R) -> R</code>
+<code class="language-swift">func withUnsafeBufferPointer&lt;R&gt;(body: @noescape (UnsafeBufferPointer&lt;T&gt;) -&gt; R) -> R</code>
 <div class="comment">
     <p>Call <code>body(p)</code>, where <code>p</code> is a pointer to the <code>ContiguousArray</code>&#39;s
 contiguous storage.</p>
@@ -437,7 +437,7 @@ speed.</p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">mutating func withUnsafeMutableBufferPointer&lt;R&gt;(body: (inout UnsafeMutableBufferPointer&lt;T&gt;) -&gt; R) -> R</code>
+<code class="language-swift">mutating func withUnsafeMutableBufferPointer&lt;R&gt;(body: @noescape (inout UnsafeMutableBufferPointer&lt;T&gt;) -&gt; R) -> R</code>
 <div class="comment">
     <p>Call <code>body(p)</code>, where <code>p</code> is a pointer to the <code>ContiguousArray</code>&#39;s
 mutable contiguous storage.</p>

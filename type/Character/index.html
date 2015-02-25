@@ -9,7 +9,7 @@
     <title>Character &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Swift documentation for 'Character': Character represents some Unicode grapheme cluster as defined by a canonical, localized, or otherwise tailored segmentation algorithm.">
-    <meta name="keywords" content="Character,struct,swift,documentation,getMirror,writeTo,hashValue">
+    <meta name="keywords" content="Character,struct,swift,documentation,getMirror,writeTo,hashValue,debugDescription">
     <link rel="canonical" href="http://swiftdoc.org/type/Character/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/Character/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -172,7 +172,7 @@ segmentation algorithm.</p>
 </div>
 
 <h3>Inheritance</h3>
-<code class="inherits">ExtendedGraphemeClusterLiteralConvertible, Equatable, Hashable, Comparable, Reflectable, Streamable</code>
+<code class="inherits">ExtendedGraphemeClusterLiteralConvertible, Equatable, Hashable, Comparable, DebugPrintable, Reflectable, Streamable</code>
 <span class="viz"><a href="hierarchy/">Protocol hierarchy</a></span>
 
 
@@ -224,6 +224,12 @@ segmentation algorithm.</p>
 <p><strong>Note:</strong> the hash value is not guaranteed to be stable across
 different invocations of the same program.  Do not persist the
 hash value across program runs.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">var debugDescription: String { get }</code>
+<div class="comment">
+    <p>A textual representation of <code>self</code>, suitable for debugging.</p>
 </div>
 </div>
 

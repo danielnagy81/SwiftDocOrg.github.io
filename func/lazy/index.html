@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/func/lazy/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -164,18 +164,6 @@
           
           <article class="content">
           <div class="declaration">
-<code class="language-swift">func lazy&lt;S : CollectionType where S.Index : RandomAccessIndexType&gt;(s: S) -> LazyRandomAccessCollection&lt;S&gt;</code>
-<div class="comment">
-    <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
-</div>
-</div>
-<div class="declaration">
-<code class="language-swift">func lazy&lt;S : SequenceType&gt;(s: S) -> LazySequence&lt;S&gt;</code>
-<div class="comment">
-    <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
-</div>
-</div>
-<div class="declaration">
 <code class="language-swift">func lazy&lt;S : CollectionType where S.Index : BidirectionalIndexType&gt;(s: S) -> LazyBidirectionalCollection&lt;S&gt;</code>
 <div class="comment">
     <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
@@ -183,6 +171,18 @@
 </div>
 <div class="declaration">
 <code class="language-swift">func lazy&lt;S : CollectionType where S.Index : ForwardIndexType&gt;(s: S) -> LazyForwardCollection&lt;S&gt;</code>
+<div class="comment">
+    <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func lazy&lt;S : CollectionType where S.Index : RandomAccessIndexType&gt;(s: S) -> LazyRandomAccessCollection&lt;S&gt;</code>
+<div class="comment">
+    <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func lazy&lt;S : SequenceType&gt;(s: S) -> LazySequence&lt;S&gt;</code>
 <div class="comment">
     <p>Augment <code>s</code> with lazy methods such as <code>map</code>, <code>filter</code>, etc.</p>
 </div>

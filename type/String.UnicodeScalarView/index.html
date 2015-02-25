@@ -9,7 +9,7 @@
     <title>String.UnicodeScalarView &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Swift documentation for 'String.UnicodeScalarView': A collection of Unicode scalar values that encode a String .">
-    <meta name="keywords" content="String.UnicodeScalarView,struct,swift,documentation,generate,getMirror,startIndex,endIndex,description,debugDescription">
+    <meta name="keywords" content="String.UnicodeScalarView,struct,swift,documentation,generate,getMirror,reserveCapacity,append,extend,replaceRange,insert,splice,removeAtIndex,removeRange,removeAll,startIndex,endIndex,description,debugDescription">
     <link rel="canonical" href="http://swiftdoc.org/type/String.UnicodeScalarView/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/String.UnicodeScalarView/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -171,7 +171,7 @@ encode a <code>String</code> .</p>
 </div>
 
 <h3>Inheritance</h3>
-<code class="inherits">Sliceable, SequenceType, Reflectable, Printable, DebugPrintable</code>
+<code class="inherits">Sliceable, SequenceType, Reflectable, Printable, DebugPrintable, ExtensibleCollectionType, RangeReplaceableCollectionType</code>
 <span class="viz"><a href="hierarchy/">Protocol hierarchy</a></span>
 
 
@@ -179,6 +179,13 @@ encode a <code>String</code> .</p>
 <code class="nested">String.UnicodeScalarView.Index, String.UnicodeScalarView.Generator</code>
 
 
+<h3>Initializers</h3>
+<div class="declaration">
+<code class="language-swift">init()</code>
+<div class="comment">
+    <p>Construct an empty instance.</p>
+</div>
+</div>
 
 
 <h3>Instance Variables</h3>
@@ -221,6 +228,93 @@ this <em>sequence</em>.</p>
 <code class="language-swift">func getMirror() -> MirrorType</code>
 <div class="comment">
     <p>Returns a mirror that reflects <code>self</code>.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func reserveCapacity(n: Int)</code>
+<div class="comment">
+    <p>Reserve enough space to store <code>n</code> ASCII characters.</p>
+
+<p>Complexity: O(<code>n</code>)</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func append(x: UnicodeScalar)</code>
+<div class="comment">
+    <p>Append <code>x</code> to <code>self</code>.</p>
+
+<p>Complexity: amortized O(1).</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func extend&lt;S : SequenceType where UnicodeScalar == UnicodeScalar&gt;(newElements: S)</code>
+<div class="comment">
+    <p>Append the elements of <code>newElements</code> to <code>self</code>.</p>
+
+<p>Complexity: O(<em>length of result</em>) </p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func replaceRange&lt;C : CollectionType where UnicodeScalar == UnicodeScalar&gt;(subRange: Range&lt;String.UnicodeScalarView.Index&gt;, with newElements: C)</code>
+<div class="comment">
+    <p>Replace the given <code>subRange</code> of elements with <code>newElements</code>.</p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p>Complexity: O(<code>count(subRange)</code>) if <code>subRange.endIndex
+== self.endIndex</code> and <code>isEmpty(newElements)</code>, O(N) otherwise.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func insert(newElement: UnicodeScalar, atIndex i: String.UnicodeScalarView.Index)</code>
+<div class="comment">
+    <p>Insert <code>newElement</code> at index <code>i</code>.</p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p>Complexity: O(<code>count(self)</code>).</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func splice&lt;S : CollectionType where UnicodeScalar == UnicodeScalar&gt;(newElements: S, atIndex i: String.UnicodeScalarView.Index)</code>
+<div class="comment">
+    <p>Insert <code>newElements</code> at index <code>i</code></p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p>Complexity: O(<code>count(self) + count(newElements)</code>).</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func removeAtIndex(i: String.UnicodeScalarView.Index) -> UnicodeScalar</code>
+<div class="comment">
+    <p>Remove the and return element at index <code>i</code></p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p>Complexity: O(<code>count(self)</code>).</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func removeRange(subRange: Range&lt;String.UnicodeScalarView.Index&gt;)</code>
+<div class="comment">
+    <p>Remove the indicated <code>subRange</code> of elements</p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p>Complexity: O(<code>count(self)</code>).</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">mutating func removeAll(keepCapacity: Bool = default)</code>
+<div class="comment">
+    <p>Remove all elements.</p>
+
+<p>Invalidates all indices with respect to <code>self</code>.</p>
+
+<p><strong><code>keepCapacity</code></strong>, if <code>true</code>, prevents the release of
+/   allocated storage, which can be a useful optimization
+   when <code>self</code> is going to be grown again.</p>
 </div>
 </div>
 

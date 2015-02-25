@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>contains &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for 'contains': Return true iff an element in seq satisfies predicate.">
+    <meta name="description" content="Swift documentation for 'contains': Return true iff x is in seq.">
     <meta name="keywords" content="contains,func,swift,documentation">
     <link rel="canonical" href="http://swiftdoc.org/func/contains/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
@@ -22,18 +22,18 @@
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
     <meta property="og:title" content="contains"/>
     <meta property="og:url" content="http://swiftdoc.org/func/contains/index.html"/>
-    <meta property="og:description" content="Swift documentation for 'contains': Return true iff an element in seq satisfies predicate."/>
+    <meta property="og:description" content="Swift documentation for 'contains': Return true iff x is in seq."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
     <meta name="twitter:title" content="contains"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for 'contains': Return true iff an element in seq satisfies predicate."/>
+    <meta name="twitter:description" content="Swift documentation for 'contains': Return true iff x is in seq."/>
     <meta name="twitter:url" content="http://swiftdoc.org/func/contains/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -164,15 +164,15 @@
           
           <article class="content">
           <div class="declaration">
-<code class="language-swift">func contains&lt;S : SequenceType, L : BooleanType&gt;(seq: S, predicate: (S.Generator.Element) -&gt; L) -> Bool</code>
-<div class="comment">
-    <p>Return <code>true</code> iff an element in <code>seq</code> satisfies <code>predicate</code>.</p>
-</div>
-</div>
-<div class="declaration">
 <code class="language-swift">func contains&lt;S : SequenceType where S.Generator.Element : Equatable&gt;(seq: S, x: S.Generator.Element) -> Bool</code>
 <div class="comment">
     <p>Return <code>true</code> iff <code>x</code> is in <code>seq</code>.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func contains&lt;S : SequenceType, L : BooleanType&gt;(seq: S, predicate: @noescape (S.Generator.Element) -&gt; L) -> Bool</code>
+<div class="comment">
+    <p>Return <code>true</code> iff an element in <code>seq</code> satisfies <code>predicate</code>.</p>
 </div>
 </div>
 

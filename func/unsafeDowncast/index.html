@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/func/unsafeDowncast/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -172,10 +172,10 @@
 performed to ensure that <code>x</code> actually has dynamic type <code>T</code>.</p>
 
 <p><strong>Danger:</strong> trades safety for performance.  Use <code>unsafeDowncast</code>
-only when <code>x as T</code> has proven to be a performance problem and you
-are confident that, always, <code>x is T</code>.  It is better than an
-<code>unsafeBitCast</code> because it&#39;s more restrictive, and because
-checking is still performed in debug builds.</p>
+  only when <code>x as T</code> has proven to be a performance problem and you
+  are confident that, always, <code>x is T</code>.  It is better than an
+  <code>unsafeBitCast</code> because it&#39;s more restrictive, and because
+  checking is still performed in debug builds.</p>
 </div>
 </div>
 

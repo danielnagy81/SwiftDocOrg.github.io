@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/String/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -847,7 +847,7 @@ by concatenating them with a path separator between each pair.</p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">func withCString&lt;Result&gt;(f: (UnsafePointer&lt;Int8&gt;) -&gt; Result) -> Result</code>
+<code class="language-swift">func withCString&lt;Result&gt;(f: @noescape UnsafePointer&lt;Int8&gt; -&gt; Result) -> Result</code>
 <div class="comment">
     <p>Invoke <code>f</code> on the contents of this string, represented as
 a nul-terminated array of char, ensuring that the array&#39;s

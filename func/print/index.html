@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>print &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for 'print': Writes the textual representation of object into the standard output.">
+    <meta name="description" content="Swift documentation for 'print': Writes the textual representation of value into the standard output.">
     <meta name="keywords" content="print,func,swift,documentation">
     <link rel="canonical" href="http://swiftdoc.org/func/print/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
@@ -22,18 +22,18 @@
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
     <meta property="og:title" content="print"/>
     <meta property="og:url" content="http://swiftdoc.org/func/print/index.html"/>
-    <meta property="og:description" content="Swift documentation for 'print': Writes the textual representation of object into the standard output."/>
+    <meta property="og:description" content="Swift documentation for 'print': Writes the textual representation of value into the standard output."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
     <meta name="twitter:title" content="print"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for 'print': Writes the textual representation of object into the standard output."/>
+    <meta name="twitter:description" content="Swift documentation for 'print': Writes the textual representation of value into the standard output."/>
     <meta name="twitter:url" content="http://swiftdoc.org/func/print/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -164,11 +164,11 @@
           
           <article class="content">
           <div class="declaration">
-<code class="language-swift">@inline(never)  func print&lt;T&gt;(object: T)</code>
+<code class="language-swift">@inline(never)  func print&lt;T&gt;(value: T)</code>
 <div class="comment">
-    <p>Writes the textual representation of <code>object</code> into the standard output.</p>
+    <p>Writes the textual representation of <code>value</code> into the standard output.</p>
 
-<p>The textual representation is obtained from the <code>object</code> using its protocol
+<p>The textual representation is obtained from the <code>value</code> using its protocol
 conformances, in the following order of preference: <code>Streamable</code>,
 <code>Printable</code>, <code>DebugPrintable</code>.</p>
 
@@ -177,11 +177,11 @@ protocols mentioned above.</p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">@inline(never)  func print&lt;T, TargetStream : OutputStreamType&gt;(object: T, inout target: TargetStream)</code>
+<code class="language-swift">@inline(never)  func print&lt;T, TargetStream : OutputStreamType&gt;(value: T, inout target: TargetStream)</code>
 <div class="comment">
-    <p>Writes the textual representation of <code>object</code> into the stream <code>target</code>.</p>
+    <p>Writes the textual representation of <code>value</code> into the stream <code>target</code>.</p>
 
-<p>The textual representation is obtained from the <code>object</code> using its protocol
+<p>The textual representation is obtained from the <code>value</code> using its protocol
 conformances, in the following order of preference: <code>Streamable</code>,
 <code>Printable</code>, <code>DebugPrintable</code>.</p>
 

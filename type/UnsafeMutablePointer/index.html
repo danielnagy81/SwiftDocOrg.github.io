@@ -9,7 +9,7 @@
     <title>UnsafeMutablePointer &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Swift documentation for 'UnsafeMutablePointer': A pointer to an object of type T.  This type provides no automated memory management, and therefore the user must take care to allocate and free memory appropriately.">
-    <meta name="keywords" content="UnsafeMutablePointer,struct,swift,documentation,alloc,dealloc,initialize,move,assignFrom,assignBackwardFrom,moveInitializeFrom,moveInitializeBackwardFrom,initializeFrom,initializeFrom,moveAssignFrom,destroy,destroy,successor,predecessor,distanceTo,advancedBy,getMirror,put,memory,hashValue,debugDescription">
+    <meta name="keywords" content="UnsafeMutablePointer,struct,swift,documentation,alloc,dealloc,initialize,move,assignFrom,assignBackwardFrom,moveInitializeFrom,moveInitializeBackwardFrom,initializeFrom,initializeFrom,moveAssignFrom,destroy,destroy,successor,predecessor,distanceTo,advancedBy,getMirror,put,encode,memory,hashValue,debugDescription">
     <link rel="canonical" href="http://swiftdoc.org/type/UnsafeMutablePointer/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/UnsafeMutablePointer/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -177,7 +177,7 @@ been deallocated previously);</p></li><li><p>memory is allocated, but value has 
 </div>
 
 <h3>Inheritance</h3>
-<code class="inherits">RandomAccessIndexType, Hashable, NilLiteralConvertible, _PointerType, DebugPrintable, Reflectable, SinkType</code>
+<code class="inherits">RandomAccessIndexType, Hashable, NilLiteralConvertible, _PointerType, DebugPrintable, Reflectable, SinkType, CVarArgType</code>
 <span class="viz"><a href="hierarchy/">Protocol hierarchy</a></span>
 
 
@@ -446,6 +446,13 @@ be initialized before being used again.</p>
 </div>
 <div class="declaration">
 <code class="language-swift">mutating func put(x: T)</code>
+</div>
+<div class="declaration">
+<code class="language-swift">func encode() -> [Word]</code>
+<div class="comment">
+    <p>Transform <code>self</code> into a series of machine words that can be
+appropriately interpreted by C varargs</p>
+</div>
 </div>
 
 <h3>Subscripts</h3>

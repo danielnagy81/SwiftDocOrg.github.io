@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>startsWith &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for 'startsWith': Return true iff the the initial elements of s are equal to prefix.">
+    <meta name="description" content="Swift documentation for 'startsWith': Return true iff s begins with elements equivalent to those of prefix, using isEquivalent as the equivalence test.  Requires: isEquivalent is an equivalence relation.">
     <meta name="keywords" content="startsWith,func,swift,documentation">
     <link rel="canonical" href="http://swiftdoc.org/func/startsWith/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
@@ -22,18 +22,18 @@
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
     <meta property="og:title" content="startsWith"/>
     <meta property="og:url" content="http://swiftdoc.org/func/startsWith/index.html"/>
-    <meta property="og:description" content="Swift documentation for 'startsWith': Return true iff the the initial elements of s are equal to prefix."/>
+    <meta property="og:description" content="Swift documentation for 'startsWith': Return true iff s begins with elements equivalent to those of prefix, using isEquivalent as the equivalence test.  Requires: isEquivalent is an equivalence relation."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
     <meta name="twitter:title" content="startsWith"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for 'startsWith': Return true iff the the initial elements of s are equal to prefix."/>
+    <meta name="twitter:description" content="Swift documentation for 'startsWith': Return true iff s begins with elements equivalent to those of prefix, using isEquivalent as the equivalence test.  Requires: isEquivalent is an equivalence relation."/>
     <meta name="twitter:url" content="http://swiftdoc.org/func/startsWith/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -164,17 +164,17 @@
           
           <article class="content">
           <div class="declaration">
-<code class="language-swift">func startsWith&lt;S0 : SequenceType, S1 : SequenceType where S0.Generator.Element == S0.Generator.Element, S0.Generator.Element : Equatable&gt;(s: S0, prefix: S1) -> Bool</code>
-<div class="comment">
-    <p>Return true iff the the initial elements of <code>s</code> are equal to <code>prefix</code>.</p>
-</div>
-</div>
-<div class="declaration">
-<code class="language-swift">func startsWith&lt;S0 : SequenceType, S1 : SequenceType where S0.Generator.Element == S0.Generator.Element&gt;(s: S0, prefix: S1, isEquivalent: (S0.Generator.Element, S0.Generator.Element) -&gt; Bool) -> Bool</code>
+<code class="language-swift">func startsWith&lt;S0 : SequenceType, S1 : SequenceType where S0.Generator.Element == S0.Generator.Element&gt;(s: S0, prefix: S1, isEquivalent: @noescape (S0.Generator.Element, S0.Generator.Element) -&gt; Bool) -> Bool</code>
 <div class="comment">
     <p>Return true iff <code>s</code> begins with elements equivalent to those of
 <code>prefix</code>, using <code>isEquivalent</code> as the equivalence test.  Requires:
 <code>isEquivalent</code> is an <a href="http://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a></p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func startsWith&lt;S0 : SequenceType, S1 : SequenceType where S0.Generator.Element == S0.Generator.Element, S0.Generator.Element : Equatable&gt;(s: S0, prefix: S1) -> Bool</code>
+<div class="comment">
+    <p>Return true iff the the initial elements of <code>s</code> are equal to <code>prefix</code>.</p>
 </div>
 </div>
 

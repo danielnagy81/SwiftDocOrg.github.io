@@ -33,7 +33,7 @@
     <meta name="twitter:url" content="http://swiftdoc.org/type/StaticString/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -287,7 +287,7 @@ scalar values as <code>self</code> does.</p>
 
 <h3>Instance Methods</h3>
 <div class="declaration">
-<code class="language-swift">func withUTF8Buffer&lt;R&gt;(body: (UnsafeBufferPointer&lt;UInt8&gt;) -&gt; R) -> R</code>
+<code class="language-swift">func withUTF8Buffer&lt;R&gt;(body: @noescape (UnsafeBufferPointer&lt;UInt8&gt;) -&gt; R) -> R</code>
 <div class="comment">
     <p>Invoke <code>body</code> with a buffer containing the UTF-8 code units of
 <code>self</code>.</p>

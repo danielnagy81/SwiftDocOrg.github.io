@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>debugPrint &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for 'debugPrint': Write to target the textual representation of x most suitable for debugging.">
+    <meta name="description" content="Swift documentation for 'debugPrint': Write to the console the textual representation of x most suitable for debugging.">
     <meta name="keywords" content="debugPrint,func,swift,documentation">
     <link rel="canonical" href="http://swiftdoc.org/func/debugPrint/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
@@ -22,18 +22,18 @@
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
     <meta property="og:title" content="debugPrint"/>
     <meta property="og:url" content="http://swiftdoc.org/func/debugPrint/index.html"/>
-    <meta property="og:description" content="Swift documentation for 'debugPrint': Write to target the textual representation of x most suitable for debugging."/>
+    <meta property="og:description" content="Swift documentation for 'debugPrint': Write to the console the textual representation of x most suitable for debugging."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
     <meta name="twitter:title" content="debugPrint"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for 'debugPrint': Write to target the textual representation of x most suitable for debugging."/>
+    <meta name="twitter:description" content="Swift documentation for 'debugPrint': Write to the console the textual representation of x most suitable for debugging."/>
     <meta name="twitter:url" content="http://swiftdoc.org/func/debugPrint/index.html"/>
 
     <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-9862072fa984774e7474ab700f7d9c31.js" type="text/javascript"></script>
+    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -164,25 +164,25 @@
           
           <article class="content">
           <div class="declaration">
-<code class="language-swift">@inline(never)  func debugPrint&lt;T, TargetStream : OutputStreamType&gt;(object: T, inout target: TargetStream)</code>
-<div class="comment">
-    <p>Write to <code>target</code> the textual representation of <code>x</code> most suitable
-for debugging.</p>
-
-<ul><li>If <code>T</code> conforms to <code>DebugPrintable</code>, write <code>x.debugDescription</code></li><li>Otherwise, if <code>T</code> conforms to <code>Printable</code>, write <code>x.description</code></li><li>Otherwise, if <code>T</code> conforms to <code>Stramable</code>, write <code>x</code></li><li>Otherwise, fall back to a default textual representation.</li></ul>
-
-<p>See also: <code>debugPrintln(x, &amp;target)</code></p>
-</div>
-</div>
-<div class="declaration">
 <code class="language-swift">@inline(never)  func debugPrint&lt;T&gt;(x: T)</code>
 <div class="comment">
     <p>Write to the console the textual representation of <code>x</code> most suitable
 for debugging.</p>
 
-<ul><li>If <code>T</code> conforms to <code>DebugPrintable</code>, write <code>x.debugDescription</code></li><li>Otherwise, if <code>T</code> conforms to <code>Printable</code>, write <code>x.description</code></li><li>Otherwise, if <code>T</code> conforms to <code>Stramable</code>, write <code>x</code></li><li>Otherwise, fall back to a default textual representation.</li></ul>
+<ul><li>If <code>T</code> conforms to <code>DebugPrintable</code>, write <code>x.debugDescription</code></li><li>Otherwise, if <code>T</code> conforms to <code>Printable</code>, write <code>x.description</code></li><li>Otherwise, if <code>T</code> conforms to <code>Streamable</code>, write <code>x</code></li><li>Otherwise, fall back to a default textual representation.</li></ul>
 
 <p>See also: <code>debugPrintln(x)</code></p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">@inline(never)  func debugPrint&lt;T, TargetStream : OutputStreamType&gt;(value: T, inout target: TargetStream)</code>
+<div class="comment">
+    <p>Write to <code>target</code> the textual representation of <code>x</code> most suitable
+for debugging.</p>
+
+<ul><li>If <code>T</code> conforms to <code>DebugPrintable</code>, write <code>x.debugDescription</code></li><li>Otherwise, if <code>T</code> conforms to <code>Printable</code>, write <code>x.description</code></li><li>Otherwise, if <code>T</code> conforms to <code>Streamable</code>, write <code>x</code></li><li>Otherwise, fall back to a default textual representation.</li></ul>
+
+<p>See also: <code>debugPrintln(x, &amp;target)</code></p>
 </div>
 </div>
 
