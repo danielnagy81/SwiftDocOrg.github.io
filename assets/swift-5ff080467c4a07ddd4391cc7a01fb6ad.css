@@ -1417,6 +1417,13 @@ a {
 .content .syntaxhighlighter a :hover {
   color: #6f41a7 !important;
 }
+.content pre {
+  border: none;
+  border-left: 5px solid #efefef;
+  border-radius: 0;
+  padding: 0 0 0 10px;
+  background: transparent;
+}
 .content .comment {
   margin: 0 0 20px;
   font-size: 15px;
@@ -1434,13 +1441,6 @@ a {
 }
 .content .comment strong {
   font-weight: 600;
-}
-.content .comment pre {
-  border: none;
-  border-left: 5px solid #efefef;
-  border-radius: 0;
-  padding: 0 0 0 10px;
-  background: transparent;
 }
 .content .comment .syntaxhighlighter {
   font-size: 1em !important;

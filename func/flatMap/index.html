@@ -6,11 +6,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Operator: &% &#8212; SwiftDoc.org</title>
+    <title>flatMap &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for the '&%' operator.">
-    <meta name="keywords" content="swift,documentation,swiftdoc,apple,swiftdoc.org">
-    <link rel="canonical" href="http://swiftdoc.org/operator/amppct/">
+    <meta name="description" content="Swift documentation for 'flatMap': Return an Array containing the results of mapping transform over source and flattening the result.">
+    <meta name="keywords" content="flatMap,func,swift,documentation">
+    <link rel="canonical" href="http://swiftdoc.org/func/flatMap/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/touch-icon-ipad.png">
@@ -20,20 +20,20 @@
 
     <meta property="og:site_name" content="SwiftDoc.org"/>
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta property="og:title" content="Operator: &%"/>
-    <meta property="og:url" content="http://swiftdoc.org/operator/amppct/index.html"/>
-    <meta property="og:description" content="Swift documentation for the '&%' operator."/>
+    <meta property="og:title" content="flatMap"/>
+    <meta property="og:url" content="http://swiftdoc.org/func/flatMap/index.html"/>
+    <meta property="og:description" content="Swift documentation for 'flatMap': Return an Array containing the results of mapping transform over source and flattening the result."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
-    <meta name="twitter:title" content="Operator: &%"/>
+    <meta name="twitter:title" content="flatMap"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for the '&amp;%' operator."/>
-    <meta name="twitter:url" content="http://swiftdoc.org/operator/amppct/index.html"/>
+    <meta name="twitter:description" content="Swift documentation for 'flatMap': Return an Array containing the results of mapping transform over source and flattening the result."/>
+    <meta name="twitter:url" content="http://swiftdoc.org/func/flatMap/index.html"/>
 
-    <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
+    <link href="/assets/swift-5ff080467c4a07ddd4391cc7a01fb6ad.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/swift-22f17d2a47337fff751427d4edfae4e4.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -42,7 +42,7 @@
     
   </head>
 
-  <body class="p-operator p-amppct">
+  <body class="p-func p-flatMap">
     <div id="wrapper">
 
     	<nav class="navbar navbar-default" role="navigation" id="navbar">
@@ -159,21 +159,28 @@
 
         <div class="col-sm-8 col-md-9" id="content">
           <header>
-            <h2>Operator: &%</h2>
+            <h2>flatMap</h2>
           </header>
           
           <article class="content">
-          <code class="language-swift">infix operator &amp;% {
-    associativity left
-    precedence 150
-}</code>
-
-<h3>Declarations</h3>
-
-<div class="declaration">
-<code class="language-swift">func &amp;%&lt;T : _IntegerArithmeticType&gt;(lhs: T, rhs: T) -> T</code>
+          <div class="declaration">
+<code class="language-swift">func flatMap&lt;S : SequenceType, T&gt;(source: S, transform: @noescape (S.Generator.Element) -&gt; [T]) -> [T]</code>
 <div class="comment">
-    <p>remainder <code>lhs</code> and <code>rhs</code>, silently discarding any overflow.</p>
+    <p>Return an <code>Array</code> containing the results of mapping <code>transform</code>
+over <code>source</code> and flattening the result.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func flatMap&lt;C : CollectionType, T&gt;(source: C, transform: (C.Generator.Element) -&gt; [T]) -> [T]</code>
+<div class="comment">
+    <p>Return an <code>Array</code> containing the results of mapping <code>transform</code>
+over <code>source</code> and flattening the result.</p>
+</div>
+</div>
+<div class="declaration">
+<code class="language-swift">func flatMap&lt;T, U&gt;(x: T?, f: @noescape (T) -&gt; U?) -> U?</code>
+<div class="comment">
+    <p>Returns <code>f(self)!</code> iff <code>self</code> and <code>f(self)</code> are not nil.</p>
 </div>
 </div>
 
@@ -188,7 +195,7 @@
 
             <div id="footer">
             <span class="line">
-                <span class="version">Swift version 1.2 (swiftlang-602.0.42.4)</span> &nbsp;&sdot;&nbsp;
+                <span class="version">Swift version 1.2 (swiftlang-602.0.44.6)</span> &nbsp;&sdot;&nbsp;
                 <a href="/news/">News</a>
             </span> <span class="sep">&nbsp;&sdot;&nbsp;</span>
             <span class="line">

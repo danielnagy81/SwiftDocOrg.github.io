@@ -9,7 +9,7 @@
     <title>ContiguousArray &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Swift documentation for 'ContiguousArray': A fast, contiguously-stored array of T.">
-    <meta name="keywords" content="ContiguousArray,struct,swift,documentation,generate,reserveCapacity,append,extend,removeLast,insert,removeAtIndex,removeAll,join,reduce,sort,sorted,map,reverse,filter,getMirror,withUnsafeBufferPointer,withUnsafeMutableBufferPointer,replaceRange,splice,removeRange,startIndex,endIndex,count,capacity,isEmpty,first,last,description,debugDescription,Element,SubSlice">
+    <meta name="keywords" content="ContiguousArray,struct,swift,documentation,generate,reserveCapacity,append,extend,removeLast,insert,removeAtIndex,removeAll,join,reduce,sort,sorted,map,flatMap,reverse,filter,getMirror,withUnsafeBufferPointer,withUnsafeMutableBufferPointer,replaceRange,splice,removeRange,startIndex,endIndex,count,capacity,isEmpty,first,last,description,debugDescription,Element,SubSlice">
     <link rel="canonical" href="http://swiftdoc.org/type/ContiguousArray/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
@@ -32,8 +32,8 @@
     <meta name="twitter:description" content="Swift documentation for 'ContiguousArray': A fast, contiguously-stored array of T."/>
     <meta name="twitter:url" content="http://swiftdoc.org/type/ContiguousArray/index.html"/>
 
-    <link href="/assets/swift-2894f46478cdc30eddafbd16338e3e81.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-96c6337b00cb7638728336ea82991dd7.js" type="text/javascript"></script>
+    <link href="/assets/swift-5ff080467c4a07ddd4391cc7a01fb6ad.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/swift-22f17d2a47337fff751427d4edfae4e4.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -188,7 +188,7 @@ detail.</p>
 </div>
 </div>
 <div class="declaration">
-<code class="language-swift">typealias SubSlice = Slice&lt;T&gt;</code>
+<code class="language-swift">typealias SubSlice = ArraySlice&lt;T&gt;</code>
 <div class="comment">
     <p>A type that can represent a sub-range of a ContiguousArray </p>
 </div>
@@ -406,6 +406,13 @@ over the elements.</p>
 </div>
 </div>
 <div class="declaration">
+<code class="language-swift">func flatMap&lt;U&gt;(transform: @noescape (T) -&gt; ContiguousArray&lt;U&gt;) -> ContiguousArray&lt;U&gt;</code>
+<div class="comment">
+    <p>Return a ContiguousArray containing the results of calling
+<code>transform(x)</code> on each element <code>x</code> of <code>self</code> and flattening the result.</p>
+</div>
+</div>
+<div class="declaration">
 <code class="language-swift">func reverse() -> ContiguousArray&lt;T&gt;</code>
 <div class="comment">
     <p>A ContiguousArray containing the elements of <code>self</code> in reverse order</p>
@@ -481,7 +488,7 @@ speed.</p>
 <code class="language-swift">subscript(index: Int) -> T</code>
 </div>
 <div class="declaration">
-<code class="language-swift">subscript(subRange: Range&lt;Int&gt;) -> Slice&lt;T&gt;</code>
+<code class="language-swift">subscript(subRange: Range&lt;Int&gt;) -> ArraySlice&lt;T&gt;</code>
 </div>
 
 
@@ -497,7 +504,7 @@ speed.</p>
 
             <div id="footer">
             <span class="line">
-                <span class="version">Swift version 1.2 (swiftlang-602.0.42.4)</span> &nbsp;&sdot;&nbsp;
+                <span class="version">Swift version 1.2 (swiftlang-602.0.44.6)</span> &nbsp;&sdot;&nbsp;
                 <a href="/news/">News</a>
             </span> <span class="sep">&nbsp;&sdot;&nbsp;</span>
             <span class="line">
