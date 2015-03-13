@@ -1530,6 +1530,10 @@ a {
 .posts code {
   font-size: 14px;
 }
+.posts .syntaxhighlighter {
+  font-size: 1em !important;
+  margin: 0 !important;
+}
 .postlist {
   list-style: none;
   margin: 0;
