@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>assert &#8212; SwiftDoc.org</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swift documentation for 'assert': User code assertions.">
+    <meta name="description" content="Swift documentation for 'assert': Traditional C-style assert with an optional message.">
     <meta name="keywords" content="assert,func,swift,documentation">
     <link rel="canonical" href="http://swiftdoc.org/func/assert/">
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
@@ -22,18 +22,18 @@
     <meta property="og:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
     <meta property="og:title" content="assert"/>
     <meta property="og:url" content="http://swiftdoc.org/func/assert/index.html"/>
-    <meta property="og:description" content="Swift documentation for 'assert': User code assertions."/>
+    <meta property="og:description" content="Swift documentation for 'assert': Traditional C-style assert with an optional message."/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@SwiftDocOrg"/>
     <meta name="twitter:creator" content="@SwiftDocOrg"/>
     <meta name="twitter:title" content="assert"/>
     <meta name="twitter:image" content="http://swiftdoc.org/assets/images/touch-icon-ipad-retina.png"/>
-    <meta name="twitter:description" content="Swift documentation for 'assert': User code assertions."/>
+    <meta name="twitter:description" content="Swift documentation for 'assert': Traditional C-style assert with an optional message."/>
     <meta name="twitter:url" content="http://swiftdoc.org/func/assert/index.html"/>
 
     <link href="/assets/swift-945778ccdbb08c286d6b84e818b6fa23.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/swift-22f17d2a47337fff751427d4edfae4e4.js" type="text/javascript"></script>
+    <script src="/assets/swift-d7178fccc681149933a0e638becc4d29.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -166,20 +166,19 @@
           <div class="declaration">
 <code class="language-swift">func assert(condition: @autoclosure () -&gt; Bool, _ message: @autoclosure () -&gt; String = default, file: StaticString = default, line: UWord = default)</code>
 <div class="comment">
-    <p>User code assertions.</p>
+    <p>Traditional C-style assert with an optional message.</p>
 
-<p>User code assertions are only enabled in debug mode. In release and
-unchecked modes these checks are disabled.  This means they may have no
-effect on program semantics, depending on the assert configuration.
-Traditional C-style assert with an optional message.</p>
+<p>Use this function for internal sanity checks that are active
+during testing but do not impact performance of shipping code.
+To check for invalid usage in Release builds; see <code>precondition</code>.</p>
 
-<p>When assertions are enabled and <code>condition</code> is false, stop program
-execution in a debuggable state after printing a message.  When
-assertions are disabled in release and fast builds, <code>condition</code> is not even
-evaluated.</p>
-
-<p>When assertions are turned off, the optimizer can assume that the
-<code>condition</code> is true.</p>
+<ul><li><p>In playgrounds and -Onone builds (the default for Xcode&#39;s Debug
+configuration): if <code>condition</code> evaluates to false, stop program
+execution in a debuggable state after printing <code>message</code>.</p></li><li><p>In -O builds (the default for Xcode&#39;s Release configuration),
+<code>condition</code> is not evaluated, and there are no effects.</p></li><li><p>In -Ounchecked builds, <code>condition</code> is not evaluated, but the
+optimizer may assume that it <em>would</em> evaluate to <code>true</code>. Failure
+to satisfy that assumption in -Ounchecked builds is a serious
+programming error.</p></li></ul>
 </div>
 </div>
 
